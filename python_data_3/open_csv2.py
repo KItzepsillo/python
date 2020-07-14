@@ -1,8 +1,5 @@
-# Open  file csv
-# csv -> comma separated, values
-
 """
-Example code to read and parse a CSV file.
+Using the csv module.
 """
 
 import csv
@@ -15,10 +12,10 @@ def parse(csvfilename):
     """
     table = []
     with open(csvfilename, "r") as csvfile:
-        for line in csvfile:
-            line = line.rstrip()
-            columns = line.split(',')
-            table.append(columns)
+        csvreader = csv.reader(csvfile,
+                               skipinitialspace=True)
+        for row in csvreader:
+            table.append(row)
     return table
 
 
@@ -35,7 +32,7 @@ def print_table(table):
             print("{:>4}".format(col), end='')
         print("", end='\n')
 
-table = parse("/home/kevin/Documents/Ejercicios/Python/python_data_3/hightemp.csv")
+table = parse("hightemp.csv")
 print_table(table)
 
 print("")
