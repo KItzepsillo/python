@@ -65,7 +65,7 @@ def csv_quoting_examples():
     """
     Run some example of writing 2D tables as CSV files using various quoting options
     """
-    name_table = read_csv_file("name_table.csv", ",")
+    name_table = read_csv_file("/home/kevin/Documents/Ejercicios/Python/python_data_3/name_table.csv", ",")
     name_table.append([1, 2, 3])
     write_csv_file(name_table, "name_table_minimal.csv", ",", csv.QUOTE_MINIMAL)
     write_csv_file(name_table, "name_table_all.csv", ",", csv.QUOTE_ALL)
