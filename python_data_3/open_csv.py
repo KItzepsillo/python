@@ -41,5 +41,5 @@ print_table(table)
 print("")
 print("")
 
-table2 = parse("hightemp2.csv")
+table2 = parse("/home/kevin/Documents/Ejercicios/Python/python_data_3/hightemp2.csv")
 print_table(table2)
